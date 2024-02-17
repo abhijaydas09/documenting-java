@@ -1,0 +1,57 @@
+# syntax of reccursion
+
+returnType methodName(parameters) {
+    // base case - the condition where the recursion stops
+    if (baseCondition) {
+        // return some value
+    } else {
+        // recursive call
+        return methodName(modifiedParameters);
+    }
+}
+
+
+
+1 . recursion means a function which calls itself.
+2 . base condition in recursion : condition where our recursion will stop making new calls.
+
+
+Q . how function calls work in languages ?
+
+Q. why do we need recursion?
+- it helps us in solving bigger and complex problems easily.
+- you can convert recursion solutions into iteration and vice versa.
+- space complexity is not constant because of recursive calls.
+
+Q . when to use recursion ?
+- when ever there is complex question and you can break it down to simplar problems , try using recursion.
+
+note :  whenever the function is called at the end its called the tail recursion.
+
+Q . what is the space complexity not constant because of recursive calls.
+
+Q . how to understand and approach a problem :
+Ans . 1.  identify if you can break down problem into smaller problems
+      2.  Write the recurance relation if needed.
+      3.  draw the reccursive tree:
+              a. see the flow of function , how they are getting stacked.
+              b. identify and focus on left tree calls and right tree calls.
+              c. draw the tree and pointers again and again using pen and paper , use a debugger to see how it flows.
+      4. see how the values are returned in each steps.
+      5. see when the function call will come out of. in the end you will come out of the main function.
+
+
+everyone faces a doubts , in variables :
+
+VARIABLES: 1.argument
+           2.return type
+           3.body of the function.
+1.  you should know what to pass
+2. you should know what the body will do
+3. and what you want to return.
+
+Types of recurance relation :
+1 .  linear recurance relation - fibonachi number
+2 .   divide and conquer relation - bianry search
+
+

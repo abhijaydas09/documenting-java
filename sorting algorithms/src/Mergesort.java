@@ -1,15 +1,15 @@
 public class Mergesort {
     public static void main(String[] args) {
-        int[] nums = {5, 4, 3, 2, 1, 6, 7, 8, 9, 10};
-        divide(nums, 0, nums.length - 1);
-        for (int i = 0; i < nums.length; i++) {
-            int[] arr = {};
+        int[] arr = {5, 44, 23, 26, 46, 7, 53, 753};
+        mergesort(arr);
+        for (int i : arr) {
+            System.out.print(i + " ");
         }
     }
     public static void conqure(int[] nums, int start, int mid, int end) {
         int temp_arr[] = new int[end - start + 1];
-        int left = 0;
-        int right = mid + 1;
+        int left = start ;// left taken as start  ;
+        int right = mid ;
         int temp_element = 0;
         while (left <= mid && right <= end) {
             if (nums[left] < nums[right]) {
@@ -22,6 +22,19 @@ public class Mergesort {
                 right++;
             }
         }
+        while (left <= mid) {
+            temp_arr[temp_element] = nums[left];
+            temp_element++;
+            left++;
+        }
+        while (right < end) {
+            temp_arr[temp_element] = nums[right];
+            temp_element++;
+            right++;
+        }
+        for (int i = start; i <= end; i++) {
+            nums[i] = temp_arr[i - start];
+        }
 
     }
     public static void divide(int[] nums, int start, int end) {
@@ -32,6 +45,9 @@ public class Mergesort {
         divide(nums, start, mid);
         divide(nums, mid + 1, end);
         conqure(nums, start, mid, end);
+    }
+    public static void mergesort(int[] nums) {
+        divide(nums, 0, nums.length - 1);
     }
 
 }

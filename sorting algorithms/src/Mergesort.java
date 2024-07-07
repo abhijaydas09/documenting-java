@@ -6,7 +6,6 @@ public class Mergesort {
             int[] arr = {};
         }
     }
-
     public static void conqure(int[] nums, int start, int mid, int end) {
         int temp_arr[] = new int[end - start + 1];
         int left = 0;
@@ -25,7 +24,6 @@ public class Mergesort {
         }
 
     }
-
     public static void divide(int[] nums, int start, int end) {
         if (start >= end) {
             return;
@@ -36,21 +34,4 @@ public class Mergesort {
         conqure(nums, start, mid, end);
     }
 
-    //Given a signed 32-bit integer x, return x with its digits reversed.
-    // If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.
-    public static int reverse(int x) {
-        int reversed = 0;
-        while (x != 0) {
-            int digit = x % 10;
-            x /= 10;
-            if (reversed > Integer.MAX_VALUE / 10 || (reversed == Integer.MAX_VALUE / 10 && digit > 7)) {
-                return 0;
-            }
-            if (reversed < Integer.MIN_VALUE / 10 || (reversed == Integer.MIN_VALUE / 10 && digit < -8)) {
-                return 0;
-            }
-            reversed = reversed * 10 + digit;
-        }
-        return reversed;
-    }
 }
